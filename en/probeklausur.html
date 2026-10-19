@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mock exam · Freie Fahrt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Free online course in English and German for the IHK Fachkundeprüfung (taxi and private hire): 27 lessons, practice questions, mock exam, calculation trainer.">
+<link rel="alternate" hreflang="de" href="../probeklausur.html">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><span class="brand-name">Freie Fahrt<small>Taxi &amp; Private Hire Exam Prep</small></span></a>
+    <nav class="mainnav" id="mainnav" aria-label="Main navigation"><a href="kurs.html">Course</a><a href="training.html">Practice</a><a href="probeklausur.html" aria-current="page">Mock exam</a><a href="rechentrainer.html">Calculations</a><a href="karteikarten.html">Flashcards</a><a href="glossar.html">Glossary</a><a class="nav-extra" href="fortschritt.html">My progress</a></nav>
+    <div class="tools">
+      <a class="langbtn" href="../probeklausur.html" hreflang="de" lang="de" title="Auf Deutsch wechseln" data-lang="de"><span aria-hidden="true">DE</span><span class="langbtn-l">Deutsch</span></a>
+      <button class="iconbtn" type="button" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+      <a class="iconbtn" href="fortschritt.html" aria-label="My progress" title="My progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></a>
+      <button class="iconbtn" type="button" id="themeBtn" aria-label="Toggle light/dark" title="Toggle light/dark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" class="fill"/></svg></button>
+      <button class="iconbtn menubtn" type="button" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="page">
+<div class="container">
+  <div id="startView" class="stack-lg">
+    <header class="page-head">
+      <div class="eyebrow">Mock exam</div>
+      <h1>The exam under real conditions</h1>
+      <p class="muted">Structure and scoring as in the real exam under § 4 PBZugV. Every mock exam is put together anew. The questions are our own, not original IHK questions. In the real exam everything is in German, so open the German originals as often as you can.</p>
+    </header>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Part</th><th>Content</th><th class="num">Time</th><th class="num">Points</th></tr></thead>
+        <tbody>
+          <tr><th>Part 1</th><td>30 questions: multiple choice and short answers, from all exam areas</td><td class="num">60 min</td><td class="num">60</td></tr>
+          <tr><th>Part 2</th><td>Case study: a cost calculation and open questions on practical cases</td><td class="num">60 min</td><td class="num">52.5</td></tr>
+          <tr><th>Oral</th><td>Only needed if each written part is at least 50 % but the total is below 90 points</td><td class="num">up to 30 min</td><td class="num">37.5</td></tr>
+          <tr class="sum"><td colspan="3">Pass with 90 of 150 points (60 %). Each written part needs at least 50 %.</td><td class="num">150</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box merke"><div class="box-t">How it works here</div>
+      <ul>
+        <li>The clock runs like in the exam. You can jump between questions and flag them.</li>
+        <li>You rate open questions yourself at the end using a marking scheme. Be strict, like an examiner.</li>
+        <li>At the end you see your score, whether you would have passed, and all answers with explanations.</li>
+      </ul>
+    </div>
+    <div class="panel stack">
+      <label class="chip" style="display:inline-flex;gap:8px;align-items:center;width:fit-content;cursor:pointer"><input type="checkbox" id="useTimer" checked> With time limit (2 × 60 minutes)</label>
+      <div class="btns"><button class="btn primary big" type="button" id="startExam">Start mock exam</button></div>
+      <p class="muted" id="poolNote"></p>
+    </div>
+    <section class="stack" id="historyBox" hidden>
+      <h2>Your previous mock exams</h2>
+      <div class="history" id="history"></div>
+    </section>
+  </div>
+
+  <div id="examView" hidden>
+    <div class="session-bar">
+      <div class="session-row"><b id="partTitle">Part 1</b><span class="timer" id="timer">60:00</span><button class="btn small primary" type="button" id="submitPart">Submit part</button></div>
+      <div class="qnav" id="qnav" aria-label="Question overview"></div>
+    </div>
+    <div id="examQ" style="padding-top:20px"></div>
+    <div class="btns" style="margin-top:16px">
+      <button class="btn ghost" type="button" id="prevQ">← Back</button>
+      <button class="btn ghost" type="button" id="flagQ">Flag</button>
+      <button class="btn" type="button" id="nextQ">Next →</button>
+    </div>
+    <div class="box achtung" id="confirmBox" hidden style="margin-top:20px">
+      <div class="box-t">Really submit?</div>
+      <p id="confirmText"></p>
+      <div class="btns"><button class="btn primary" type="button" id="confirmYes">Yes, submit</button><button class="btn ghost" type="button" id="confirmNo">Keep working</button></div>
+    </div>
+  </div>
+
+  <div id="pauseView" hidden class="stack-lg">
+    <header class="page-head"><div class="eyebrow">Break</div><h1>Part 1 is submitted</h1><p class="muted">In the real exam there is usually a short break between the parts. Part 2 is a case study: a cost calculation and open questions. Get paper and a calculator.</p></header>
+    <div><button class="btn primary big" type="button" id="startPart2">Start part 2</button></div>
+  </div>
+
+  <div id="rateView" hidden class="stack-lg">
+    <header class="page-head"><div class="eyebrow">Self-rating</div><h1>Rate your open answers</h1><p class="muted">Compare each answer with the model answer. Only tick points that are really in your answer. Then you will see your result.</p></header>
+    <div class="quiz" id="rateList"></div>
+    <div class="panel" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><span class="mono" id="rateInfo"></span><button class="btn primary" type="button" id="toResult" disabled>Show result</button></div>
+  </div>
+
+  <div id="resultView" hidden class="stack-lg"></div>
+</div>
+
+</main>
+<footer class="sitefoot">
+  <div class="sitefoot-in">
+    <div class="foot-brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><div><b>Freie Fahrt</b><p>Free preparation for the German IHK exam for taxi and private hire (Mietwagen) operators.</p></div></div>
+    <p class="disclaimer">All texts and practice questions were written by us, based on German law, Annex 3 of the PBZugV and the DIHK syllabus. They are not original IHK exam questions. The IHK may use different wording and calculation layouts. This is not legal advice. The exam itself is in German, so key terms are always shown in German as well. All amounts are net unless stated otherwise.</p>
+    <nav class="footnav" aria-label="Legal"><a href="kurs.html">Course overview</a><a href="fortschritt.html">My progress</a><a href="impressum.html">Legal notice (Impressum)</a><a href="datenschutz.html">Privacy policy</a><a href="../probeklausur.html" hreflang="de">Deutsch</a></nav>
+    <p class="stand">Last updated: October 2026</p>
+  </div>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-row"><input id="searchInput" type="search" placeholder="Search, e.g. duty to return, depreciation, Rückkehrpflicht" autocomplete="off"><button class="btn ghost" type="button" id="searchClose">Close</button></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script src="../assets/data-en/kurs-daten.js"></script><script src="../assets/app.js"></script><script src="../assets/data-en/fragen.js"></script><script src="../assets/data-en/glossar.js"></script><script src="../assets/quiz.js"></script><script src="../assets/rechenaufgaben.js"></script><script src="../assets/probeklausur.js"></script>
+</body>
+</html>

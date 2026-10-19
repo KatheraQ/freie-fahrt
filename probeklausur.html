@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de" data-base="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Probeklausur · Freie Fahrt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Kostenloser Online-Kurs zur IHK-Fachkundeprüfung Taxi und Mietwagen: 27 Lektionen, Fragentrainer, Probeklausur, Rechentrainer.">
+<link rel="alternate" hreflang="en" href="en/probeklausur.html">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><span class="brand-name">Freie Fahrt<small>Fachkunde Taxi &amp; Mietwagen</small></span></a>
+    <nav class="mainnav" id="mainnav" aria-label="Hauptnavigation"><a href="kurs.html">Kurs</a><a href="training.html">Fragentrainer</a><a href="probeklausur.html" aria-current="page">Probeklausur</a><a href="rechentrainer.html">Rechentrainer</a><a href="karteikarten.html">Karteikarten</a><a href="glossar.html">Glossar</a><a class="nav-extra" href="fortschritt.html">Mein Fortschritt</a></nav>
+    <div class="tools">
+      <a class="langbtn" href="en/probeklausur.html" hreflang="en" lang="en" title="Switch to English" data-lang="en"><span aria-hidden="true">EN</span><span class="langbtn-l">English</span></a>
+      <button class="iconbtn" type="button" id="searchBtn" aria-label="Suchen" title="Suchen (/)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+      <a class="iconbtn" href="fortschritt.html" aria-label="Mein Fortschritt" title="Mein Fortschritt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></a>
+      <button class="iconbtn" type="button" id="themeBtn" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel umschalten"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" class="fill"/></svg></button>
+      <button class="iconbtn menubtn" type="button" id="menuBtn" aria-label="Menü" aria-expanded="false" aria-controls="mainnav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="page">
+<div class="container">
+  <div id="startView" class="stack-lg">
+    <header class="page-head">
+      <div class="eyebrow">Probeklausur</div>
+      <h1>Prüfung unter echten Bedingungen</h1>
+      <p class="muted">Aufbau und Punkte wie in der echten Fachkundeprüfung nach § 4 PBZugV. Jede Probeklausur wird neu zusammengestellt. Die Fragen sind selbst erstellt, keine Original-IHK-Fragen.</p>
+    </header>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Teil</th><th>Inhalt</th><th class="num">Zeit</th><th class="num">Punkte</th></tr></thead>
+        <tbody>
+          <tr><th>Teil 1</th><td>30 Fragen: Multiple Choice und Fragen mit kurzer Antwort, aus allen Prüfungsgebieten</td><td class="num">60 Min.</td><td class="num">60</td></tr>
+          <tr><th>Teil 2</th><td>Fallstudie: eine Kostenrechnung und offene Fragen zu Praxisfällen</td><td class="num">60 Min.</td><td class="num">52,5</td></tr>
+          <tr><th>Mündlich</th><td>Nur nötig, wenn du schriftlich zwischen 50 % je Teil und 90 Punkten liegst</td><td class="num">bis 30 Min.</td><td class="num">37,5</td></tr>
+          <tr class="sum"><td colspan="3">Bestanden ab 90 von 150 Punkten (60 %). Jeder schriftliche Teil braucht mindestens 50 %.</td><td class="num">150</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box merke"><div class="box-t">So läuft es hier</div>
+      <ul>
+        <li>Die Zeit läuft wie in der Prüfung. Du kannst zwischen den Fragen springen und Fragen markieren.</li>
+        <li>Offene Fragen bewertest du am Ende selbst mit einem Bewertungsschema. Sei streng, so wie ein Prüfer.</li>
+        <li>Am Ende siehst du deine Punkte, ob du bestanden hättest, und alle Lösungen mit Erklärung.</li>
+      </ul>
+    </div>
+    <div class="panel stack">
+      <label class="chip" style="display:inline-flex;gap:8px;align-items:center;width:fit-content;cursor:pointer"><input type="checkbox" id="useTimer" checked> Mit Zeitlimit (2 × 60 Minuten)</label>
+      <div class="btns"><button class="btn primary big" type="button" id="startExam">Probeklausur starten</button></div>
+      <p class="muted" id="poolNote"></p>
+    </div>
+    <section class="stack" id="historyBox" hidden>
+      <h2>Deine bisherigen Probeklausuren</h2>
+      <div class="history" id="history"></div>
+    </section>
+  </div>
+
+  <div id="examView" hidden>
+    <div class="session-bar">
+      <div class="session-row"><b id="partTitle">Teil 1</b><span class="timer" id="timer">60:00</span><button class="btn small primary" type="button" id="submitPart">Teil abgeben</button></div>
+      <div class="qnav" id="qnav" aria-label="Fragenübersicht"></div>
+    </div>
+    <div id="examQ" style="padding-top:20px"></div>
+    <div class="btns" style="margin-top:16px">
+      <button class="btn ghost" type="button" id="prevQ">← Zurück</button>
+      <button class="btn ghost" type="button" id="flagQ">Markieren</button>
+      <button class="btn" type="button" id="nextQ">Weiter →</button>
+    </div>
+    <div class="box achtung" id="confirmBox" hidden style="margin-top:20px">
+      <div class="box-t">Wirklich abgeben?</div>
+      <p id="confirmText"></p>
+      <div class="btns"><button class="btn primary" type="button" id="confirmYes">Ja, abgeben</button><button class="btn ghost" type="button" id="confirmNo">Weiter bearbeiten</button></div>
+    </div>
+  </div>
+
+  <div id="pauseView" hidden class="stack-lg">
+    <header class="page-head"><div class="eyebrow">Pause</div><h1>Teil 1 ist abgegeben</h1><p class="muted">In der echten Prüfung gibt es zwischen den Teilen meist eine kurze Pause. Teil 2 ist eine Fallstudie: eine Kostenrechnung und offene Fragen. Nimm Papier und Taschenrechner.</p></header>
+    <div><button class="btn primary big" type="button" id="startPart2">Teil 2 starten</button></div>
+  </div>
+
+  <div id="rateView" hidden class="stack-lg">
+    <header class="page-head"><div class="eyebrow">Selbstbewertung</div><h1>Bewerte deine offenen Antworten</h1><p class="muted">Vergleiche jede Antwort mit der Musterlösung. Hake nur Punkte ab, die wirklich in deiner Antwort stehen. Danach siehst du dein Ergebnis.</p></header>
+    <div class="quiz" id="rateList"></div>
+    <div class="panel" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><span class="mono" id="rateInfo"></span><button class="btn primary" type="button" id="toResult" disabled>Ergebnis anzeigen</button></div>
+  </div>
+
+  <div id="resultView" hidden class="stack-lg"></div>
+</div>
+
+</main>
+<footer class="sitefoot">
+  <div class="sitefoot-in">
+    <div class="foot-brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><div><b>Freie Fahrt</b><p>Kostenlose Vorbereitung auf die IHK-Fachkundeprüfung für den Taxen- und Mietwagenverkehr.</p></div></div>
+    <p class="disclaimer">Alle Texte und Übungsfragen sind selbst erstellt, auf Grundlage der Gesetze, der PBZugV Anlage 3 und des DIHK-Orientierungsrahmens. Es sind keine Original-IHK-Prüfungsfragen. Die IHK kann im Detail andere Formulierungen und Rechenschemata verlangen. Die Inhalte sind keine Rechtsberatung. Alle Beträge netto, sofern nicht anders angegeben.</p>
+    <nav class="footnav" aria-label="Rechtliches"><a href="kurs.html">Kursübersicht</a><a href="fortschritt.html">Mein Fortschritt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="en/probeklausur.html" hreflang="en">English</a></nav>
+    <p class="stand">Stand: Oktober 2026</p>
+  </div>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Suchen">
+    <div class="search-row"><input id="searchInput" type="search" placeholder="Suche: z. B. Rückkehrpflicht, Abschreibung, P-Schein" autocomplete="off"><button class="btn ghost" type="button" id="searchClose">Schließen</button></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script src="assets/data-de/kurs-daten.js"></script><script src="assets/app.js"></script><script src="assets/data-de/fragen.js"></script><script src="assets/data-de/glossar.js"></script><script src="assets/quiz.js"></script><script src="assets/rechenaufgaben.js"></script><script src="assets/probeklausur.js"></script>
+</body>
+</html>

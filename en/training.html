@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Practice trainer · Freie Fahrt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Free online course in English and German for the IHK Fachkundeprüfung (taxi and private hire): 27 lessons, practice questions, mock exam, calculation trainer.">
+<link rel="alternate" hreflang="de" href="../training.html">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><span class="brand-name">Freie Fahrt<small>Taxi &amp; Private Hire Exam Prep</small></span></a>
+    <nav class="mainnav" id="mainnav" aria-label="Main navigation"><a href="kurs.html">Course</a><a href="training.html" aria-current="page">Practice</a><a href="probeklausur.html">Mock exam</a><a href="rechentrainer.html">Calculations</a><a href="karteikarten.html">Flashcards</a><a href="glossar.html">Glossary</a><a class="nav-extra" href="fortschritt.html">My progress</a></nav>
+    <div class="tools">
+      <a class="langbtn" href="../training.html" hreflang="de" lang="de" title="Auf Deutsch wechseln" data-lang="de"><span aria-hidden="true">DE</span><span class="langbtn-l">Deutsch</span></a>
+      <button class="iconbtn" type="button" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+      <a class="iconbtn" href="fortschritt.html" aria-label="My progress" title="My progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></a>
+      <button class="iconbtn" type="button" id="themeBtn" aria-label="Toggle light/dark" title="Toggle light/dark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" class="fill"/></svg></button>
+      <button class="iconbtn menubtn" type="button" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="page">
+<div class="container">
+  <header class="page-head">
+    <div class="eyebrow">Practice trainer</div>
+    <h1>Practise until it sticks</h1>
+    <p class="muted">Choose topics and a mode. After each answer you get an explanation with the legal source. The trainer remembers which questions you got wrong. Use “Show German original” to train the exam language.</p>
+  </header>
+
+  <div id="setupView" class="setup">
+    <fieldset>
+      <legend>1. Mode</legend>
+      <div class="radio-cards" id="modes"></div>
+    </fieldset>
+    <fieldset>
+      <legend>2. Topics</legend>
+      <div class="btns"><button type="button" class="btn small ghost" id="selAll">Select all</button><button type="button" class="btn small ghost" id="selNone">None</button></div>
+      <div class="stack" id="topics"></div>
+    </fieldset>
+    <fieldset>
+      <legend>3. Number and question types</legend>
+      <div class="btns" id="counts"></div>
+      <label class="chip" style="display:inline-flex;gap:8px;align-items:center;width:fit-content;cursor:pointer"><input type="checkbox" id="withOpen" checked> Include open questions with self-rating</label>
+    </fieldset>
+    <div class="panel" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+      <span id="poolInfo" class="mono"></span>
+      <button type="button" class="btn primary big" id="startBtn">Start practice</button>
+    </div>
+  </div>
+
+  <div id="sessionView" hidden>
+    <div class="session-bar">
+      <div class="session-row"><b id="sessTitle">Practice</b><span class="mono" id="sessCount"></span><button class="btn small ghost" type="button" id="quitBtn">Finish</button></div>
+      <div class="bar"><i id="sessBar"></i></div>
+    </div>
+    <div id="qSlot" style="padding-top:20px"></div>
+    <div class="btns" style="margin-top:16px"><button class="btn primary" type="button" id="nextBtn" hidden>Next</button><button class="btn ghost" type="button" id="skipBtn">Skip</button></div>
+  </div>
+
+  <div id="resultView" hidden class="stack-lg"></div>
+</div>
+
+</main>
+<footer class="sitefoot">
+  <div class="sitefoot-in">
+    <div class="foot-brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><div><b>Freie Fahrt</b><p>Free preparation for the German IHK exam for taxi and private hire (Mietwagen) operators.</p></div></div>
+    <p class="disclaimer">All texts and practice questions were written by us, based on German law, Annex 3 of the PBZugV and the DIHK syllabus. They are not original IHK exam questions. The IHK may use different wording and calculation layouts. This is not legal advice. The exam itself is in German, so key terms are always shown in German as well. All amounts are net unless stated otherwise.</p>
+    <nav class="footnav" aria-label="Legal"><a href="kurs.html">Course overview</a><a href="fortschritt.html">My progress</a><a href="impressum.html">Legal notice (Impressum)</a><a href="datenschutz.html">Privacy policy</a><a href="../training.html" hreflang="de">Deutsch</a></nav>
+    <p class="stand">Last updated: October 2026</p>
+  </div>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-row"><input id="searchInput" type="search" placeholder="Search, e.g. duty to return, depreciation, Rückkehrpflicht" autocomplete="off"><button class="btn ghost" type="button" id="searchClose">Close</button></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script src="../assets/data-en/kurs-daten.js"></script><script src="../assets/app.js"></script><script src="../assets/data-en/fragen.js"></script><script src="../assets/data-en/glossar.js"></script><script src="../assets/quiz.js"></script><script src="../assets/training.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>My progress · Freie Fahrt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Free online course in English and German for the IHK Fachkundeprüfung (taxi and private hire): 27 lessons, practice questions, mock exam, calculation trainer.">
+<link rel="alternate" hreflang="de" href="../fortschritt.html">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><span class="brand-name">Freie Fahrt<small>Taxi &amp; Private Hire Exam Prep</small></span></a>
+    <nav class="mainnav" id="mainnav" aria-label="Main navigation"><a href="kurs.html">Course</a><a href="training.html">Practice</a><a href="probeklausur.html">Mock exam</a><a href="rechentrainer.html">Calculations</a><a href="karteikarten.html">Flashcards</a><a href="glossar.html">Glossary</a><a class="nav-extra" href="fortschritt.html" aria-current="page">My progress</a></nav>
+    <div class="tools">
+      <a class="langbtn" href="../fortschritt.html" hreflang="de" lang="de" title="Auf Deutsch wechseln" data-lang="de"><span aria-hidden="true">DE</span><span class="langbtn-l">Deutsch</span></a>
+      <button class="iconbtn" type="button" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+      <a class="iconbtn" href="fortschritt.html" aria-label="My progress" title="My progress" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></a>
+      <button class="iconbtn" type="button" id="themeBtn" aria-label="Toggle light/dark" title="Toggle light/dark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" class="fill"/></svg></button>
+      <button class="iconbtn menubtn" type="button" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="page">
+<div class="container">
+  <header class="page-head">
+    <div class="eyebrow">My progress</div>
+    <h1>How well prepared are you?</h1>
+    <p class="muted">All data stays in this browser only. Nobody else can see it. Below you can back it up and move it to another device. Progress is shared between the English and German version.</p>
+  </header>
+  <div class="stack-lg">
+    <div class="dash">
+      <div class="meter" aria-label="Exam readiness">
+        <div class="meter-top"><span class="on">● Exam readiness</span><span>Estimate</span></div>
+        <div><div class="meter-label">ready</div><div class="meter-main" id="ready">0<small>%</small></div></div>
+        <div class="meter-row">
+          <div class="meter-cell"><b id="kLess">0</b><small>lessons done</small></div>
+          <div class="meter-cell"><b id="kQ">0</b><small>questions practised</small></div>
+          <div class="meter-cell"><b id="kEx">–</b><small>best mock exam</small></div>
+        </div>
+      </div>
+      <div class="stack">
+        <h2>What next?</h2>
+        <div id="todo" class="stack"></div>
+        <p class="muted" style="font-size:.88rem">The estimate combines lessons done (25 %), how many questions you practised and got right (50 %) and your best mock exam (25 %). It is only a rough guide.</p>
+      </div>
+    </div>
+
+    <section class="stack">
+      <h2>Progress by module</h2>
+      <div class="tbl wide"><table>
+        <thead><tr><th>Module</th><th class="num">Lessons</th><th class="num">Questions practised</th><th class="num">Success rate</th><th></th></tr></thead>
+        <tbody id="modRows"></tbody>
+      </table></div>
+    </section>
+
+    <section class="stack" id="weakBox" hidden>
+      <h2>Your weak spots</h2>
+      <p class="muted">Lessons where you get less than 70 % right.</p>
+      <div class="history" id="weak"></div>
+    </section>
+
+    <section class="stack">
+      <h2>Mock exams</h2>
+      <div class="history" id="exams"></div>
+    </section>
+
+    <section class="stack">
+      <h2>Calculation trainer</h2>
+      <div class="history" id="rechen"></div>
+    </section>
+
+    <section class="stack panel">
+      <h2>Back up and transfer your progress</h2>
+      <p class="muted">Copy the code and keep it somewhere, for example in a note. On another device, paste it below.</p>
+      <textarea class="ta" id="exportTa" readonly aria-label="Backup code" style="min-height:80px;font-family:var(--font-mono);font-size:.8rem"></textarea>
+      <div class="btns"><button class="btn" type="button" id="copyBtn">Copy code</button></div>
+      <label for="importTa"><b>Paste code</b></label>
+      <textarea class="ta" id="importTa" style="min-height:80px;font-family:var(--font-mono);font-size:.8rem" placeholder="Paste your backup code here"></textarea>
+      <div class="btns"><button class="btn" type="button" id="importBtn">Load progress</button></div>
+      <div id="importMsg" aria-live="polite"></div>
+      <hr style="border:0;border-top:1px solid var(--line);width:100%">
+      <div class="btns"><button class="btn ghost" type="button" id="resetBtn">Reset everything</button></div>
+      <div class="box achtung" id="resetConfirm" hidden><div class="box-t">Really delete everything?</div><p>Lessons, answers, flashcards and mock exams will be deleted in this browser. This cannot be undone.</p><div class="btns"><button class="btn primary" type="button" id="resetYes">Yes, delete everything</button><button class="btn ghost" type="button" id="resetNo">Cancel</button></div></div>
+    </section>
+  </div>
+</div>
+
+</main>
+<footer class="sitefoot">
+  <div class="sitefoot-in">
+    <div class="foot-brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><div><b>Freie Fahrt</b><p>Free preparation for the German IHK exam for taxi and private hire (Mietwagen) operators.</p></div></div>
+    <p class="disclaimer">All texts and practice questions were written by us, based on German law, Annex 3 of the PBZugV and the DIHK syllabus. They are not original IHK exam questions. The IHK may use different wording and calculation layouts. This is not legal advice. The exam itself is in German, so key terms are always shown in German as well. All amounts are net unless stated otherwise.</p>
+    <nav class="footnav" aria-label="Legal"><a href="kurs.html">Course overview</a><a href="fortschritt.html">My progress</a><a href="impressum.html">Legal notice (Impressum)</a><a href="datenschutz.html">Privacy policy</a><a href="../fortschritt.html" hreflang="de">Deutsch</a></nav>
+    <p class="stand">Last updated: October 2026</p>
+  </div>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-row"><input id="searchInput" type="search" placeholder="Search, e.g. duty to return, depreciation, Rückkehrpflicht" autocomplete="off"><button class="btn ghost" type="button" id="searchClose">Close</button></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script src="../assets/data-en/kurs-daten.js"></script><script src="../assets/app.js"></script><script src="../assets/data-en/fragen.js"></script><script src="../assets/rechenaufgaben.js"></script><script src="../assets/fortschritt.js"></script>
+</body>
+</html>

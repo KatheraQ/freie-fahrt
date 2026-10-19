@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" data-base="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lesson 2.3: Calculating fares and quotes · Freie Fahrt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="In lesson 2.2 you calculated your costs. Now you turn them into a price: for a quote to a company, an airport flat rate or a Mietwagen trip via an app. You learn the pricing scheme, the price floors and how to check whether a price set by an app covers your costs at all.">
+<link rel="alternate" hreflang="de" href="../lektion-2-3-kalkulation.html">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><span class="brand-name">Freie Fahrt<small>Taxi &amp; Private Hire Exam Prep</small></span></a>
+    <nav class="mainnav" id="mainnav" aria-label="Main navigation"><a href="kurs.html" aria-current="page">Course</a><a href="training.html">Practice</a><a href="probeklausur.html">Mock exam</a><a href="rechentrainer.html">Calculations</a><a href="karteikarten.html">Flashcards</a><a href="glossar.html">Glossary</a><a class="nav-extra" href="fortschritt.html">My progress</a></nav>
+    <div class="tools">
+      <a class="langbtn" href="../lektion-2-3-kalkulation.html" hreflang="de" lang="de" title="Auf Deutsch wechseln" data-lang="de"><span aria-hidden="true">DE</span><span class="langbtn-l">Deutsch</span></a>
+      <button class="iconbtn" type="button" id="searchBtn" aria-label="Search" title="Search (/)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+      <a class="iconbtn" href="fortschritt.html" aria-label="My progress" title="My progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></a>
+      <button class="iconbtn" type="button" id="themeBtn" aria-label="Toggle light/dark" title="Toggle light/dark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 7v10a5 5 0 0 0 0-10z" class="fill"/></svg></button>
+      <button class="iconbtn menubtn" type="button" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="">
+<div class="lesson-layout">
+<aside class="lesson-side"><nav class="outline" aria-label="Course contents"><div class="outline-head"><a href="kurs.html">Course overview</a></div><details class="ol-mod"><summary><span class="ol-nr">1</span>Law</summary><ol><li><a href="lektion-1-1-taxi-oder-mietwagen.html" data-lesson="taxi-oder-mietwagen"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.1</span> Taxi or private hire (Mietwagen)?</span></a></li><li><a href="lektion-1-2-genehmigung-berufszugang.html" data-lesson="genehmigung-berufszugang"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.2</span> Licence, access to the profession and inspections</span></a></li><li><a href="lektion-1-3-tarife-befoerderungspflicht.html" data-lesson="tarife-befoerderungspflicht"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.3</span> Fares and the obligation to carry</span></a></li><li><a href="lektion-1-4-unternehmen-gruenden.html" data-lesson="unternehmen-gruenden"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.4</span> Starting a business: trade and commercial law</span></a></li><li><a href="lektion-1-5-fahrpersonal-strassenverkehrsrecht.html" data-lesson="fahrpersonal-strassenverkehrsrecht"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.5</span> Drivers and road traffic law</span></a></li><li><a href="lektion-1-6-arbeitsrecht.html" data-lesson="arbeitsrecht"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.6</span> Employment law: from contract to dismissal</span></a></li><li><a href="lektion-1-7-arbeitszeit.html" data-lesson="arbeitszeit"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.7</span> Working time, breaks and rest periods</span></a></li><li><a href="lektion-1-8-sozialversicherung.html" data-lesson="sozialversicherung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.8</span> Social insurance</span></a></li><li><a href="lektion-1-9-vertraege-haftung.html" data-lesson="vertraege-haftung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.9</span> Contracts, the contract of carriage and liability</span></a></li><li><a href="lektion-1-10-steuern.html" data-lesson="steuern"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">1.10</span> Taxes: VAT, receipts, vehicle, income and trade tax</span></a></li></ol></details><details class="ol-mod" open><summary><span class="ol-nr">2</span>Business management</summary><ol><li><a href="lektion-2-1-zahlungsverkehr-finanzierung.html" data-lesson="zahlungsverkehr-finanzierung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">2.1</span> Payments, financing and key figures</span></a></li><li><a href="lektion-2-2-kostenrechnung.html" data-lesson="kostenrechnung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">2.2</span> Cost accounting</span></a></li><li><a href="lektion-2-3-kalkulation.html" data-lesson="kalkulation" aria-current="page"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">2.3</span> Calculating fares and quotes</span></a></li><li><a href="lektion-2-4-buchfuehrung.html" data-lesson="buchfuehrung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">2.4</span> Bookkeeping, cash book and profit calculation</span></a></li><li><a href="lektion-2-5-versicherungen.html" data-lesson="versicherungen"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">2.5</span> Insurance</span></a></li><li><a href="lektion-2-6-dokumente.html" data-lesson="dokumente"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">2.6</span> Documents to carry and retention periods</span></a></li></ol></details><details class="ol-mod"><summary><span class="ol-nr">3</span>Vehicles and operations</summary><ol><li><a href="lektion-3-1-zulassung.html" data-lesson="zulassung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">3.1</span> Vehicle registration and operation</span></a></li><li><a href="lektion-3-2-wartung-hu.html" data-lesson="wartung-hu"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">3.2</span> Maintenance, roadworthiness test and calibration</span></a></li><li><a href="lektion-3-3-ausruestung.html" data-lesson="ausruestung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">3.3</span> Vehicle equipment and design</span></a></li><li><a href="lektion-3-4-funk-bereitstellung.html" data-lesson="funk-bereitstellung"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">3.4</span> Radio, standby and taxi ranks</span></a></li></ol></details><details class="ol-mod"><summary><span class="ol-nr">4</span>Safety and environment</summary><ol><li><a href="lektion-4-1-verkehrssicherheit.html" data-lesson="verkehrssicherheit"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">4.1</span> Road safety and vehicle checks</span></a></li><li><a href="lektion-4-2-unfaelle.html" data-lesson="unfaelle"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">4.2</span> Preventing accidents and acting correctly</span></a></li><li><a href="lektion-4-3-umweltschutz.html" data-lesson="umweltschutz"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">4.3</span> Environmental protection</span></a></li></ol></details><details class="ol-mod"><summary><span class="ol-nr">5</span>Cross-border transport</summary><ol><li><a href="lektion-5-1-fahrten-ins-ausland.html" data-lesson="fahrten-ins-ausland"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">5.1</span> Trips abroad</span></a></li><li><a href="lektion-5-2-pass-zoll.html" data-lesson="pass-zoll"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">5.2</span> Passports and customs</span></a></li><li><a href="lektion-5-3-dokumente-ausland.html" data-lesson="dokumente-ausland"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">5.3</span> Documents for trips abroad</span></a></li></ol></details><details class="ol-mod"><summary><span class="ol-nr">6</span>The exam</summary><ol><li><a href="lektion-6-1-pruefung-ablauf.html" data-lesson="pruefung-ablauf"><span class="ol-dot" aria-hidden="true"></span><span class="ol-t"><span class="ol-n">6.1</span> The exam: format, registration and strategy</span></a></li></ol></details></nav></aside>
+<article class="lesson" data-slug="kalkulation">
+  <header class="lesson-head">
+    <div class="crumbs"><a href="kurs.html">Course</a><span aria-hidden="true">›</span><a href="kurs.html#modul-2">Module 2 · Business management</a></div>
+    <div class="eyebrow">IHK exam for taxi and private hire operators · Lesson 2.3</div>
+    <h1>Calculating fares and quotes</h1>
+    <p class="lead">In lesson 2.2 you calculated your costs. Now you turn them into a price: for a quote to a company, an airport flat rate or a Mietwagen trip via an app. You learn the pricing scheme, the price floors and how to check whether a price set by an app covers your costs at all.</p>
+    <div class="chips"><span class="chip">Exam area 2.3 · Fares and conditions</span><span class="chip">approx. 35 minutes</span><span class="chip src-chip">PBZugV Annex 3 No. 2.2</span><span class="chip src-chip">DIHK syllabus 2.3</span><span class="chip src-chip">§§ 51, 51a PBefG</span><a class="chip" href="../lektion-2-3-kalkulation.html" lang="de">Deutsche Version</a></div>
+  </header>
+  
+  <section class="goals"><h2 class="goals-h">After this lesson you can</h2><ul><li>apply the pricing scheme from cost price to gross price</li><li>explain which costs the base fare, km price and time price cover</li><li>distinguish short-term and long-term price floor</li><li>calculate a quote for a Mietwagen trip</li><li>check with reverse calculation whether an app's fixed price covers the costs</li></ul></section>
+  <div class="lesson-body">
+<section>
+  <h2 id="schema">The pricing scheme</h2>
+  <p>With <b>forward calculation</b> (<i lang="de">Vorwärtskalkulation</i>) you start from your costs and work out the price the customer pays:</p>
+  <div class="tbl"><table>
+    <tbody>
+      <tr><td>Cost price of the trip (from cost accounting)</td><td class="num">100,00 €</td></tr>
+      <tr><td>+ profit mark-up (profit and risk), e.g. 12 %</td><td class="num">12,00 €</td></tr>
+      <tr class="sum"><td>= net price</td><td class="num">112,00 €</td></tr>
+      <tr><td>+ VAT (Mietwagen 19 %)</td><td class="num">21,28 €</td></tr>
+      <tr class="sum"><td>= gross price (quote to private customers)</td><td class="num">133,28 €</td></tr>
+    </tbody>
+  </table></div>
+  <p>To <b>business customers</b> you usually quote the net price plus VAT. <b>Private customers</b> must always be given the final price including VAT.</p>
+  <div class="box merke"><div class="box-t">Where does the cost price come from?</div>
+    <p>From cost accounting (<a href="lektion-2-2-kostenrechnung.html">lesson 2.2</a>). Typically two rates:</p>
+    <ul>
+      <li><b>cost per km</b> for the distance, including the empty return trip if there is one.</li>
+      <li><b>cost per hour</b> for waiting time, mainly driver's wage and owner's salary.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 id="tarif">What does each part of the taxi tariff cover?</h2>
+  <p>The taxi tariff is also a calculation. The authority sets it, but often on application by the trade with a cost calculation. Each component covers certain costs:</p>
+  <div class="tbl wide"><table>
+    <thead><tr><th>Component</th><th>mainly covers</th></tr></thead>
+    <tbody>
+      <tr><th>Base fare <span lang="de" class="muted">Grundpreis</span></th><td>costs that arise for every trip regardless of length: driving to the customer, waiting at the rank, getting in and out, billing</td></tr>
+      <tr><th>Price per km <span lang="de" class="muted">Kilometerpreis</span></th><td>distance-related costs: fuel, tyres, maintenance, depreciation, and the <b>empty kilometres</b> that must be paid for too</td></tr>
+      <tr><th>Time price / waiting <span lang="de" class="muted">Zeitpreis</span></th><td>time-related costs: driver's wage and owner's salary when the taxi stands still or is in a traffic jam</td></tr>
+      <tr><th>Surcharges <span lang="de" class="muted">Zuschläge</span></th><td>special costs, e.g. a large vehicle, a lot of luggage</td></tr>
+    </tbody>
+  </table></div>
+  <p>If your costs rise, for example because of a higher minimum wage or more expensive fuel, the trade can apply to the authority for a <b>tariff adjustment</b>.</p>
+</section>
+
+<section>
+  <h2 id="untergrenze">Price floors</h2>
+  <div class="cards2">
+    <div><b>Long-term price floor</b><span>= <b>cost price</b> (all fixed and variable costs). Below it you make a loss in the long run.</span></div>
+    <div><b>Short-term price floor</b><span>= <b>variable costs</b>. Below it you lose additional money with every trip. Above it every trip contributes to the fixed costs (positive <dfn data-g="deckungsbeitrag">contribution margin</dfn>).</span></div>
+  </div>
+  <div class="box beispiel"><div class="box-t">Example (sample values)</div>
+    <p>A hotel asks for a fixed price for trips to the station (6 km, with empty return 12 km). Your cost price: 0,95 € per km, of which 0,20 € per km variable.</p>
+    <div class="calc-steps">Cost price         = 12 km × 0,95 € = 11,40 €  → long-term floor (net)
+Variable costs     = 12 km × 0,20 € =  2,40 €  → short-term floor (net)
+
+The hotel offers 9,00 € net:
+→ covers the variable costs (contribution margin 6,60 € per trip),
+  but not the cost price. Only sensible to fill idle times.</div>
+  </div>
+  <div class="box achtung"><div class="box-t">Careful with taxis</div><p>Within the mandatory service area the tariff applies. You may only agree a fixed price with the hotel as a <b>special agreement</b> under § 51 (2) PBefG, or within a fixed price / price range for pre-booked trips (<a href="lektion-1-3-tarife-befoerderungspflicht.html">lesson 1.3</a>).</p></div>
+  <div class="quiz" data-ids="ka-01"></div>
+</section>
+
+<section>
+  <h2 id="angebot">A quote for a Mietwagen trip</h2>
+  <p>A company wants you to pick up a guest at Düsseldorf airport and bring him to Aachen. You calculate like this:</p>
+  <div class="box beispiel"><div class="box-t">Working (sample values)</div>
+    <div class="calc-steps">Empty drive Aachen → Düsseldorf          85 km
+Trip with guest Düsseldorf → Aachen       85 km
+Total km                                 170 km
+Cost per km (incl. driver)              1,10 €
+Waiting at the airport (delay)           1 h × 32,00 €
+
+Distance costs   = 170 km × 1,10 €         = 187,00 €
+Waiting time     = 1 h × 32,00 €           =  32,00 €
+Cost price                                  = 219,00 €
++ profit mark-up 15 %                       =  32,85 €
+Net price                                   = 251,85 €
++ 19 % VAT                                  =  47,85 €
+Gross price                                 = 299,70 €</div>
+  </div>
+  <p>Common mistakes: forgetting the <b>empty trip</b>, calculating with 7 % instead of 19 % (Mietwagen!), or adding the mark-up to the gross price. Practise more quotes in the <a href="rechentrainer.html#angebot">calculation trainer</a>.</p>
+  <div class="quiz" data-ids="ka-02"></div>
+</section>
+
+<section>
+  <h2 id="rueckwaerts">Reverse calculation: is the app price worth it?</h2>
+  <p>For many app trips the platform sets the price. Then you calculate <b>backwards</b> (<i lang="de">Rückwärtskalkulation</i>): what is left for you after VAT and commission?</p>
+  <div class="box beispiel"><div class="box-t">Example (sample values)</div>
+    <p>The passenger pays 23,80 € in the app for 9 km. Plus 3 km to drive to the customer. In this example the platform keeps 25 % of the net price. Your costs: 0,90 € per km driven.</p>
+    <div class="calc-steps">Gross price                      23,80 €
+− 19 % VAT (23,80 × 19 ÷ 119)    − 3,80 €
+= Net price                      20,00 €
+− 25 % commission                − 5,00 €
+= Revenue for you                15,00 €
+
+Costs: (9 km + 3 km approach) × 0,90 € = 10,80 €
+Result: 15,00 € − 10,80 € = + 4,20 € per trip  ✓</div>
+    <p>Always count all km: the drive to the customer and, if no follow-up booking comes, the return to the office (duty to return!).</p>
+  </div>
+  <div class="box achtung"><div class="box-t">Check your contract</div><p>Platforms calculate the commission differently, sometimes on the net, sometimes on the gross price, sometimes with fixed fees. In the exam, the task tells you how to calculate.</p></div>
+  <div class="quiz" data-ids="ka-03 ka-04"></div>
+</section>
+
+<section>
+  <h2 id="fehler">Typical mistakes</h2>
+  <div class="mistakes">
+    <div class="mistake"><span class="ic">!</span><span>Profit mark-up added to the gross price.<span class="fix">Order: cost price → + profit → net → + VAT → gross.</span></span></div>
+    <div class="mistake"><span class="ic">!</span><span>Empty drive to the pick-up forgotten.<span class="fix">All km driven count, also without a passenger.</span></span></div>
+    <div class="mistake"><span class="ic">!</span><span>Mietwagen priced with 7 % VAT.<span class="fix">Mietwagen: 19 %.</span></span></div>
+    <div class="mistake"><span class="ic">!</span><span>“I never drive below cost price.”<span class="fix">Short term a trip above variable costs can make sense. Long term all costs must be covered.</span></span></div>
+  </div>
+</section>
+
+<section>
+  <h2 id="zusammenfassung">Summary</h2>
+  <div class="tbl"><table><tbody>
+    <tr><th>Forward</th><td>cost price + mark-up = net; + VAT = gross</td></tr>
+    <tr><th>Reverse</th><td>gross − VAT = net; − commission = revenue; compare with costs</td></tr>
+    <tr><th>Tariff</th><td>base fare: costs per trip; km price: distance incl. empty km; time price: wages when standing</td></tr>
+    <tr><th>Price floors</th><td>long-term: cost price; short-term: variable costs</td></tr>
+    <tr><th>Taxi</th><td>deviation from tariff only as a special agreement or fixed price/range per tariff</td></tr>
+  </tbody></table></div>
+</section>
+  </div>
+  <section class="lcheck" aria-labelledby="lcheck-h">
+  <div class="sec-head"><div class="eyebrow">Knowledge check</div><h2 id="lcheck-h">Did you get it?</h2>
+  <p class="muted">4 questions on this lesson. You will find all 9 questions in the <a href="training.html#kalkulation">practice trainer</a>.</p></div>
+  <div class="quiz" data-ids="ka-05 ka-06 ka-07 ka-08" data-mode="lesson"></div>
+</section>
+  <section class="finish">
+    <div><b>Finished this lesson?</b><p class="muted">Mark it as done. Your progress is saved in this browser.</p></div>
+    <button class="btn primary" type="button" id="doneBtn" data-lesson="kalkulation">Mark lesson as done</button>
+  </section>
+  <nav class="pager" aria-label="Browse lessons"><a class="pg prev" href="lektion-2-2-kostenrechnung.html"><small>Back · 2.2</small><span>Cost accounting</span></a><a class="pg next" href="lektion-2-4-buchfuehrung.html"><small>Next · 2.4</small><span>Bookkeeping, cash book and profit calculation</span></a></nav>
+  <p class="stand-note">Last updated: October 2026</p>
+</article>
+</div>
+</main>
+<footer class="sitefoot">
+  <div class="sitefoot-in">
+    <div class="foot-brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 44 22"><path d="M5 20 9 4h26l4 16z" class="mk-body"/><text x="22" y="15.6" text-anchor="middle" class="mk-text">FREI</text></svg></span><div><b>Freie Fahrt</b><p>Free preparation for the German IHK exam for taxi and private hire (Mietwagen) operators.</p></div></div>
+    <p class="disclaimer">All texts and practice questions were written by us, based on German law, Annex 3 of the PBZugV and the DIHK syllabus. They are not original IHK exam questions. The IHK may use different wording and calculation layouts. This is not legal advice. The exam itself is in German, so key terms are always shown in German as well. All amounts are net unless stated otherwise.</p>
+    <nav class="footnav" aria-label="Legal"><a href="kurs.html">Course overview</a><a href="fortschritt.html">My progress</a><a href="impressum.html">Legal notice (Impressum)</a><a href="datenschutz.html">Privacy policy</a><a href="../lektion-2-3-kalkulation.html" hreflang="de">Deutsch</a></nav>
+    <p class="stand">Last updated: October 2026</p>
+  </div>
+</footer>
+<div class="search" id="search" hidden>
+  <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-row"><input id="searchInput" type="search" placeholder="Search, e.g. duty to return, depreciation, Rückkehrpflicht" autocomplete="off"><button class="btn ghost" type="button" id="searchClose">Close</button></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script src="../assets/data-en/kurs-daten.js"></script><script src="../assets/app.js"></script><script src="../assets/data-en/fragen.js"></script><script src="../assets/data-en/glossar.js"></script><script src="../assets/quiz.js"></script>
+</body>
+</html>
