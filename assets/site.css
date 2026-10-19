@@ -610,3 +610,11 @@ textarea.ta { width: 100%; min-height: 110px; resize: vertical; font: inherit; f
 }
 .mainnav .nav-extra { display: none; }
 @media (max-width: 860px) { .mainnav .nav-extra { display: block; } }
+
+/* Kontakt */
+.foot-contact { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; color: var(--ink); }
+.foot-contact a { font-weight: 600; overflow-wrap: anywhere; }
+.contact-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.contact-card .stack { flex: 1 1 420px; }
+.contact-card .btn { overflow-wrap: anywhere; max-width: 100%; }
+.report-note { margin: 18px 0 0; font-size: .92rem; }
