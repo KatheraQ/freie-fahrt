@@ -7,9 +7,11 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Free online course in English and German for the IHK Fachkundeprüfung (taxi and private hire): 27 lessons, practice questions, mock exam, calculation trainer.">
 <link rel="alternate" hreflang="de" href="../index.html">
-<link rel="stylesheet" href="../assets/fonts/fonts.css">
+
 <link rel="stylesheet" href="../assets/site.css">
-<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem("tmfk-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}(function(r){if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window){r.classList.add("js-motion");setTimeout(function(){if(!window.FKMotion)r.classList.remove("js-motion")},2500)}})(document.documentElement)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -27,8 +29,8 @@
   </div>
 </header>
 <main id="main" class="page">
-<div class="container">
-  <section class="hero">
+<div class="container home">
+  <section class="hero hero-c">
     <div class="hero-copy">
       <div class="eyebrow">Freie Fahrt · German IHK exam for taxi and private hire operators</div>
       <h1>Pass the German taxi licence exam. <em>For free.</em></h1>
@@ -39,19 +41,19 @@
       </div>
       <div class="hero-proof"><span>No sign-up</span><span>All exam topics</span><span>German terms included</span><span>Also in <a href="../index.html" lang="de">Deutsch</a></span><span>Works on your phone</span></div>
     </div>
-    <div class="meter" aria-label="The course in numbers">
+    <div class="meter-stage"><div class="meter" aria-label="The course in numbers">
       <div class="meter-top"><span class="on">● Hired</span><span>Tariff 1</span></div>
-      <div><div class="meter-label">Course fee</div><div class="meter-main">0,00<small>EUR</small></div></div>
+      <div><div class="meter-label">Course fee</div><div class="meter-main"><span data-count="0" data-from="560" data-dec="2">0,00</span><small>EUR</small></div></div>
       <div class="meter-row">
-        <div class="meter-cell"><b>27</b><small>lessons in 6 modules</small></div>
-        <div class="meter-cell"><b>283</b><small>practice questions with explanations</small></div>
+        <div class="meter-cell"><b data-count="27">27</b><small>lessons in 6 modules</small></div>
+        <div class="meter-cell"><b data-count="283">283</b><small>practice questions with explanations</small></div>
         <div class="meter-cell"><b>2×60</b><small>minute mock exam</small></div>
       </div>
-    </div>
+    </div></div>
   </section>
 </div>
 
-<div class="container">
+<div class="container home">
   <section class="band stack-lg" aria-labelledby="h-lang">
     <div class="sec-head">
       <div class="eyebrow">Important</div>
@@ -160,6 +162,6 @@
     <div class="search-results" id="searchResults"></div>
   </div>
 </div>
-<script src="../assets/data-en/kurs-daten.js"></script><script src="../assets/app.js"></script><script src="../assets/data-en/fragen.js"></script><script src="../assets/start.js"></script>
+<script src="../assets/data-en/kurs-daten.js"></script><script src="../assets/app.js"></script><script src="../assets/motion.js"></script><script src="../assets/data-en/fragen.js"></script><script src="../assets/start.js"></script>
 </body>
 </html>
